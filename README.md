@@ -8,7 +8,6 @@ Inverted tokenization, which embeds the complete history of each variable as a s
 
 ![CS-Mamba framework](assets/cs-mamba-framework.png)
 
-*Vector source: [assets/cs-mamba-framework.pdf](assets/cs-mamba-framework.pdf)*
 
 The pipeline compensates for the information lost by inverted tokenization: a serial **data-space** stage (TLE → TrendSeasonal → SpectralMod, each added as a zero-initialized residual) acts on the raw temporal axis before tokenization, and a **token-space** backbone (Mamba + DVR, stacked `e_layers` times) restores cross-variate structure afterwards.
 

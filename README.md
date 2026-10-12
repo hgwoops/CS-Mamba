@@ -27,22 +27,27 @@ Large datasets are not tracked in this repository. Only `dataset/PEMS/PEMS07.npz
 ```bash
 python -u run.py \
   --is_training 1 \
-  --root_path ./dataset/ETT-small/ \
-  --data_path ETTh1.csv \
-  --model_id ETTh1_96_96 \
+  --root_path ./dataset/PEMS/ \
+  --data_path PEMS07.npz \
+  --model_id PEMS07_96_12 \
   --model CSMamba \
-  --data ETTh1 \
+  --data PEMS \
   --features M \
   --seq_len 96 \
-  --pred_len 96 \
+  --pred_len 12 \
   --e_layers 1 \
-  --enc_in 7 \
-  --dec_in 7 \
-  --c_out 7 \
-  --des 'Exp' \
-  --d_model 1024 \
+  --enc_in 883 \
+  --dec_in 883 \
+  --c_out 883 \
+  --d_model 512 \
+  --d_ff 512 \
+  --d_state 16 \
+  --use_norm 0 \
+  --learning_rate 0.0002 \
+  --batch_size 16 \
+  --dropout 0.1 \
   --itr 1 \
-  --learning_rate 0.00005 \
+  --des 'Exp' \
   --use_tle 1 \
   --use_trend_seasonal 1 \
   --use_spectral_mod 1 \

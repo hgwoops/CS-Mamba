@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Large datasets — only dataset/PEMS/PEMS07.npz is tracked
+dataset/Solar/
+dataset/electricity/
+dataset/PEMS/*
+!dataset/PEMS/PEMS07.npz
+dataset/ETT-small/*.csv
